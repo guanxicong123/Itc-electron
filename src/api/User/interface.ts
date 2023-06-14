@@ -11,12 +11,3 @@ export namespace Login {
     access_token: string;
   }
 }
-/**
- * @descript 菜单
- */
-// eslint-disable-next-line @typescript-eslint/no-namespace
-export namespace Menu {
-  export interface ResMenu {
-    : string;
-  }
-}

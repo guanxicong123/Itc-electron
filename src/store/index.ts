@@ -1,9 +1,8 @@
 import { defineStore, createPinia } from "pinia";
-import { Names } from "./store_name";
 import { GlobalState } from "./interface/index";
 import piniaPluginPersistedstate from "pinia-plugin-persistedstate";
 
-export const GlobalStore = defineStore(Names.MAIN, {
+export const GlobalStore = defineStore({
   state: (): GlobalState => {
     return {
       token: "",
