@@ -1,4 +1,4 @@
-> 1%
-last 2 versions
-not dead
-not ie 11
+> 1% # 基于全球使用率统计而选择的浏览器版本范围
+last 2 versions #最近的两个发行版
+not dead #官方声明不在维护或者事实上已经两年没有再更新的版本(not 不做限制)
+not ie 11 # 不在ie11上运行

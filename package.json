@@ -1,18 +1,46 @@
 {
   "name": "electron-temp",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "description": "ip广播3.0",
+  "homepage": "https://www.itc.vip/",
+  "asar": false,
+  "author": {
+    "name": "itc",
+    "email": "xxx"
+  },
+  "license": "CC0-1.0",
+  "repository": "/IPBroadCastV3.0/IPBroadCastWeb-Electron",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "electron:build": "vue-cli-service electron:build",
+    "electron:serve": "vue-cli-service electron:serve",
+    "postinstall": "electron-builder install-app-deps",
+    "postuninstall": "electron-builder install-app-deps"
   },
   "dependencies": {
-    "core-js": "^3.8.3",
+    "axios": "^1.4.0",
+    "core-js": "^3.31.0",
+    "electron": "22.3.12",
+    "element-plus": "^2.3.6",
+    "pinia": "^2.1.3",
+    "pinia-plugin-persistedstate": "^3.1.0",
+    "ts-md5": "^1.3.1",
     "vue": "^3.2.13",
+    "vue-i18n": "^9.2.2",
     "vue-router": "^4.0.3"
   },
   "devDependencies": {
+    "@types/electron-devtools-installer": "^2.2.0",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "@vue/cli-plugin-babel": "~5.0.0",
@@ -21,11 +49,20 @@
     "@vue/cli-plugin-typescript": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
     "@vue/eslint-config-typescript": "^9.1.0",
+    "electron": "22.3.12",
+    "electron-devtools-installer": "^3.1.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.0.3",
     "prettier": "^2.4.1",
-    "typescript": "~4.5.5"
+    "typescript": "~4.5.5",
+    "unplugin-auto-import": "^0.16.4",
+    "unplugin-icons": "^0.16.3",
+    "unplugin-vue-components": "^0.25.1",
+    "vue-cli-plugin-electron-builder": "^3.0.0-alpha.4"
+  },
+  "volta": {
+    "node": "16.16.0"
   }
 }
