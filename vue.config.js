@@ -16,8 +16,8 @@ module.exports = defineConfig({
   parallel: false, // 不在生产构建的时候，使用多线程来构建项目，Default 默认启用 thread-loader
   pluginOptions: {
     electronBuilder: {
-      preload: "src/preload.ts",
-      customFileProtocol: "./", //打包后iconfont路径指向
+      preload: "src/preload/index.ts",
+      customFileProtocol: "./", //打包后静态资源文件指向
       builderOptions: {
         // options placed here will be merged with default configuration and passed to electron-builder
         productName: "ApplicationName", //项目名，也是生成的安装文件名，即ApplicationName.exe

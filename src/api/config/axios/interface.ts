@@ -8,4 +8,3 @@ export interface Result {
 export interface ResultData<T = any> extends Result {
   data: T;
 }
-

@@ -4,6 +4,7 @@ import axios, {
   AxiosRequestConfig,
   AxiosResponse,
   ParamsSerializerOptions,
+  InternalAxiosRequestConfig,
 } from "axios";
 import qs from "qs";
 import { ResultData } from "./interface";
@@ -12,6 +13,10 @@ import { checkStatus } from "../helper/checkStatus";
 import { ResultEnum } from "../enums/httpEnum";
 import { GlobalStore } from "@/store";
 // import { AxiosResponse } from "@/api/interface";
+
+// export interface CustomAxiosRequestConfig extends InternalAxiosRequestConfig {
+//   noLoading?: boolean;
+// }
 
 const options = {
   // 默认地址请求地址，可在 .env.*** 文件中修改
@@ -82,8 +87,10 @@ class RequestHttp {
       (error: AxiosError) => {
         const { response } = error;
         // 请求超时 && 网络错误单独判断，没有 response
-        if (error.message.indexOf("timeout") !== -1) ElMessage.error("请求超时！请您稍后重试");
-        if (error.message.indexOf("Network Error") !== -1) ElMessage.error("网络错误！请您稍后重试");
+        if (error.message.indexOf("timeout") !== -1)
+          ElMessage.error("请求超时！请您稍后重试");
+        if (error.message.indexOf("Network Error") !== -1)
+          ElMessage.error("网络错误！请您稍后重试");
         // 根据服务器响应的错误状态码，做不同的处理
         if (response) checkStatus(response.status);
         return Promise.reject(error);
@@ -114,5 +121,6 @@ class RequestHttp {
     return this.service.post(url, params, { ...config, responseType: "blob" });
   }
 }
-
+const http2 = new RequestHttp(options);
+export { http2 };
 export default new RequestHttp(options);
