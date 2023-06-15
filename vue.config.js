@@ -16,7 +16,7 @@ module.exports = defineConfig({
   parallel: false, // 不在生产构建的时候，使用多线程来构建项目，Default 默认启用 thread-loader
   pluginOptions: {
     electronBuilder: {
-      preload: "src/preload/index.ts",
+      preload: "src/preload.ts",
       customFileProtocol: "./", //打包后静态资源文件指向
       builderOptions: {
         // options placed here will be merged with default configuration and passed to electron-builder
@@ -128,7 +128,7 @@ module.exports = defineConfig({
      */
     plugins: [
       AutoImport({
-        // 目标文件
+        // 在哪些文件里可以直接引入
         include: [
           /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
           /\.vue$/, // .vue
@@ -146,9 +146,6 @@ module.exports = defineConfig({
             ],
             "@/store/get_store": [["default", "getStore"]],
             "@/utils/global/index": [["default", "usePublicMethod"]],
-            "@/utils/global/format_map_type": [["default", "useFormatMap"]],
-            "@/utils/global/config": [["default", "useConfig"]],
-            "@/utils/global/regex": [["default", "useRegex"]],
             "@/utils/vue/use_current_instance": [
               ["default", "useCurrentInstance"],
             ],
