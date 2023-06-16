@@ -1,3 +1,13 @@
 {
-  "IP network broadcasting service platform": "IP network broadcasting service platform"
+  "Request failed! Please try again later": "Request failed! Please try again later",
+  "Login invalid! Please log in again": "Login invalid! Please log in again",
+  "The current account has no permission to access!": "The current account has no permission to access!",
+  "The resource you are accessing does not exist!": "The resource you are accessing does not exist!",
+  "The request method is wrong! Please try again later": "The request method is wrong! Please try again later",
+  "Request timed out! Please try again later": "Request timed out! Please try again later",
+  "Abnormal service!": "Abnormal service!",
+  "Gateway error!": "Gateway error!",
+  "service is not available!": "service is not available!",
+  "Gateway timed out!": "Gateway timed out!",
+  "Request failed!": "Request failed!"
 }

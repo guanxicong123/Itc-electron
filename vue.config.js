@@ -201,9 +201,6 @@ module.exports = defineConfig({
         // 注意：在 sass-loader v8 中，这个选项名是 "prependData"
         // 但是在配置 `prependData` 选项的时候
         // `scss` 语法会要求语句结尾必须有分号，`sass` 则要求必须没有分号
-        additionalData: `
-                  @import "@/assets/css/color.scss";
-                `,
       },
     },
   },

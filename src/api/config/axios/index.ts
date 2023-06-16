@@ -65,7 +65,6 @@ class RequestHttp {
      * @description 响应拦截器
      *  服务器换返回信息 -> [拦截统一处理] -> 客户端JS获取到信息
      */
-
     this.service.interceptors.response.use(
       (response: AxiosResponse): any => {
         const { data } = response;
@@ -92,7 +91,7 @@ class RequestHttp {
         if (error.message.indexOf("Network Error") !== -1)
           ElMessage.error("网络错误！请您稍后重试");
         // 根据服务器响应的错误状态码，做不同的处理
-        if (response) checkStatus(response.status);
+        if (response) ElMessage.error(checkStatus(response.status));
         return Promise.reject(error);
       }
     );

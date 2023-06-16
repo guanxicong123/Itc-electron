@@ -37,11 +37,6 @@ import { socketLogin, socket } from "@/utils/socket";
 import { ElMessage } from "element-plus";
 import { loginApi } from "@/api/User/login";
 // 全局属性
-console.log(111);
-
-console.log(useCurrentInstance, "useCurrentInstance");
-
-const { proxy } = useCurrentInstance.useCurrentInstance();
 
 const store = getStore.useAppStore();
 // 计算属性 computed
