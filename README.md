@@ -29,6 +29,7 @@
 1. localStorage 不需要重新封装，直接使用window提供
 2. css 预设文件只需要放 reset 文件
 3. src/api/config/checkStatus.ts 文件中的接口错误提示信息，通过 return 返回，统一在axios/index.ts中做消息的提示（涉及UI框架的提示样式） ,并且做国际化
+4. ip地址栏输入框组件
 
 #### 1.1.0 预更新内容
 1. language 国际化，使用自定义函数代替i18n插件（黄茂峰）
